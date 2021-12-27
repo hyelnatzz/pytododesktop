@@ -1,10 +1,12 @@
-from utils import *
+import PySimpleGUI as sg
 
-row1 = create_row(Text('first trial', key='t1'), Button('first button', key='b1'))
+name = ['hye', 'nat']
+layout = [[sg.Table(values=[['write', i+1, 'dddd'] for i in range(6)], headings=['numbers','num1', 'rand'], key='table', display_row_numbers=True)]]
 
-layout = create_layout(row1)
 
-window = MakeWindow('success', layout=layout)
+window = sg.Window('Table', layout=layout)
+
 event, values = window.read()
 
-print(values)
+if event == 'table':
+    sg.popup_ok(name[values['table'][0]])

@@ -1,4 +1,5 @@
-import unittest
+from datetime import datetime
+"""import unittest
 
 
 class IntegerArithmeticTestCase(unittest.TestCase):
@@ -10,8 +11,37 @@ class IntegerArithmeticTestCase(unittest.TestCase):
         self.assertEqual((0 * 10), 0)
         self.assertEqual((5 * 8), 40)
 
-
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main()"""
+
+now = datetime.now()
+
+print(now.strftime("%A %d. %b %Y"))
+print(now.strftime('%c'))
+print(now.strftime("%I:%M%p %a %d. %b %Y"))
+print(now.strftime('%d/%m/%Y'))
+
+def double(x):
+    return x*x
+
+def doubled(func, *args):
+    return [func(x) for x in args]
+
+print(doubled(double,1,2,3))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

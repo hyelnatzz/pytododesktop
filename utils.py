@@ -12,12 +12,16 @@ class Button(sg.Button):
 class List(sg.Listbox):
     pass
 
+class Table(sg.Table):
+    pass
 
 def create_row(*args):
     return [i for i in args]
 
 def create_layout(*args):
     return [i for i in args]
+
+
 
 """
 layout = make_layout(make_row(Text('first test'), Button('second test')), 
